@@ -1,0 +1,22 @@
+{
+  "name": "desafio-api",
+  "version": "1.0.0",
+  "description": "Desafio para vaga de backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benehurp/desafio-api.git"
+  },
+  "author": "Bene-Hur Pessoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benehurp/desafio-api/issues"
+  },
+  "homepage": "https://github.com/benehurp/desafio-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
