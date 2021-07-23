@@ -4,7 +4,7 @@
   "description": "Desafio para vaga de backend.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/benehurp/desafio-api#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "consign": "^0.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
