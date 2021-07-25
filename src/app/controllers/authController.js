@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const authConfig = require("../config/auth");
+const authConfig = require("../../config/auth");
 
 const User = require("../models/user");
 
@@ -10,7 +10,7 @@ const router = express.Router();
 
 function generateToken(params = {}) {
   return jwt.sign(params, authConfig.secret, {
-    expiresIn: 86400,
+    expiresIn: 1800,
   });
 }
 
@@ -51,9 +51,20 @@ router.post("/signin", async (req, res) => {
     return res.status(401).send({ error: "Usuário e/ou senha inválidos." });
   }
 
+  const lastLogin = await User.findOneAndUpdate(
+    { email: email },
+    { ultimo_login: Date.now() },
+    {
+      new: true,
+    }
+  );
+
   user.senha = undefined;
 
-  const token = res.send({ user, token: generateToken({ id: user.id }) });
+  res.send({
+    user,
+    token: generateToken({ id: user.id }),
+  });
 });
 
 module.exports = (app) => app.use("/auth", router);
