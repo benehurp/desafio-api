@@ -1,6 +1,6 @@
 # Accenture Desafio Backend
 
-Eu desenvolvi esse projeto usando Express, MongoDB, Mongoose, Bcryptjs, JsonWebToken, Fs Path com Eslint e Prettier.
+Eu desenvolvi esse projeto usando Express, MongoDB, Mongoose, Bcryptjs, JsonWebToken, Fs Path e Eslint com Prettier.
 
 Este sou eu apresentando a minha solução:
 
