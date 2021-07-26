@@ -8,11 +8,11 @@ const User = require('../models/user');
 router.use(authMiddleware);
 
 router.get('/', (req, res) => {
-  User.findById(req.userId, (error, data) => {
+  User.findById(req.userId, (error, user) => {
     if (error) {
       res.send({ error: 'Usuário inválido' });
     } else {
-      res.send(data);
+      res.send(user);
     }
   });
 });
