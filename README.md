@@ -3,6 +3,7 @@
 Eu desenvolvi esse projeto usando Express, MongoDB, Mongoose, Bcryptjs, JsonWebToken, Fs Path e Eslint com Prettier.
 
 Este sou eu apresentando a minha solução:
+https://www.youtube.com/watch?v=HJfgRm2QfbE
 
 ## Proposta
 
